@@ -1,0 +1,276 @@
+
+<html>
+<head>
+
+   <style>
+      *{
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+h1{
+      font-weight: 1000;
+      color: #8c6bb1;
+      font-size: 20px;
+       background-color:#f2c4df;
+    }
+h2{
+      text-align: center;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:#f2c4df;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+h3{
+      font-weight: 1000;
+      color: #000000;
+      font-size: 30px;
+ 
+    }
+  
+body{
+       background-color: #FFFFFF;
+     }
+
+       
+    }
+.vis-container{
+      width: 100%;
+    }
+  
+.pure-g{
+      margin-bottom: 25px;
+    }
+p {
+    text-align:left; 
+
+    display: table-cell;   
+    }
+    p1 {
+    text-align:left; 
+    vertical-align: middle;
+    display: table-cell;  
+    font-size; 10px;
+    }
+
+}
+ .l-box {
+        padding: 1em;
+    }
+   
+.small-font{
+      padding-left: 635px;
+      margin-top: 7px;
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #e7e1ef;
+     
+    }
+   
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f2c4df;
+  font-size: 16px;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #EFA2E5;
+   }
+   
+/* logo */
+#logo         {
+  display: inline-block;
+  color: #000000;
+  text-decoration: none;
+  width: 50%;
+}
+#logo img    {
+  width: 100px;
+  height: 100px;
+  border-radius: 3px;
+  margin-right: 8px;
+  vertical-align: middle;
+
+}
+#logo span   {
+  display: inline-block;
+}
+   
+/* laptop */ 
+#laptop img    {
+  width: 300px;
+  border-radius: 3px;
+  margin-right: 8px;
+  vertical-align: middle;
+ }
+
+* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.inner {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}      
+      
+      
+.login {
+  
+  position: absolute;
+  top: 8;
+  right: 8;
+  height: 30px;
+  width: 5%;
+  background-color: #FC85E1; 
+  text-align: center;
+  
+}
+   
+      
+ <link rel = "stylesheet" href = "styles.css">
+      
+
+ </style>
+ 
+
+   
+
+ 
+</head>
+<body>
+
+ <div class="page">
+    {% with messages = get_flashed_messages(with_categories=true)%}
+        {% if messsages %}
+            {% for category, message in messages%}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        {% endif%}
+    {% endwith %}
+   <!-- pure grid group -->
+    <div class="pure-g">
+        <h1> <a id="logo" href="test.html">
+            <img src="logo.png" alt="Logo">
+            <p>Predict Breast Cancer</p>
+        </a>
+           <!-- main navigation -->
+      <nav>
+         
+        
+        
+        <ul>
+           <li><a href="legal.html">Legal</a></li>
+           <li><a href="predictivemodel.html">Predictive Model</a></li>
+           <li><a href="understandingpage.html">Understanding Breast Cancer</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="test.html">Home</a></li>
+
+          
+        </ul>
+         
+     <div class = "login">
+          <a href = "login.html"> Log in </a>
+        </div>
+                                
+      </nav></h1>
+
+      </div>
+    </div>
+                                
+                       
+                                
+    
+        
+  <!-- end pure grid group -->
+
+     <!-- pure grid group -->
+       <div class="pure-g">
+        <div class="pure-u-1-2">
+            <h2>Register here</h2>
+          
+          </div>
+          
+     <div class="content-section">
+
+       <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <fieldset class ="form-group">
+                    <legend>class="border-bottom mb-4">Join Today</legend>
+
+
+                    <div class="form-group">
+                        {{ form.username.label(class="form-control-label") }}
+                        {{ form.username(class="form-control form-control-lg") }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.email.label(class="form-control-label") }}
+                        {{ form.email(class="form-control form-control-lg") }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.password.label(class="form-control-label") }}
+                        {{ form.password(class="form-control form-control-lg") }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.confirm_password.label(class="form-control-label") }}
+                        {{ form.confirm_password(class="form-control form-control-lg") }}
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-outline-info") }}
+                </div>
+            </form>
+        </div>
+        <div> class="border-top pt-3">
+            <small class= "text-muted">
+                Already Have An Account <a class="ml-2" href="{{url_for('login') }}">Sign In</a>
+            </small>
+
+
+        </div>
+
+
+</div>
+
+
+
+
+  </div>
+
+  </div>
+
+
+
