@@ -1,13 +1,16 @@
 from flask import Flask, render_template, url_for, flash, redirect, request
 
-from forms import RegistrationForm, LoginForm
+from src.forms import RegistrationForm, LoginForm
+from src.models import User
 
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
+from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
 
 
 app = Flask(__name__)
+app.static_folder = 'static'
 bootstrap = Bootstrap(app)
 app.config['SECRET_KEY'] = 'fit3164'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
@@ -16,14 +19,9 @@ bcrypt = Bcrypt(app)
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 
-
-from models import User
-
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
-
-
 
 @app.route("/home.html")
 def home():
@@ -57,8 +55,6 @@ def login():
 @app.route("/understandingpage.html")
 def understandingpage():
     return render_template('understandingpage.html', title = 'Understanding Breast Cancer')
-
-
 
 if __name__ == '__main__':
 	app.run(debug=True)

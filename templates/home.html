@@ -1,0 +1,200 @@
+<html>
+<head>
+      
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css2') }}">
+
+</head>
+
+<body>
+     <div class="hold">
+  <div class="header">
+    <div class="container">
+                              
+      <ul class="nav">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="understandingpage.html">Understanding Breast Cancer</a></li>
+        <li><a href="predictivemodel.html">Predictive Model</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+      
+<div class="section">
+  <div class="slider">
+    <div class="container slidercontent">
+      <h1 class="hero">Predict Breast Cancer</h1>
+      <h2 class="hero">Predict Breast Cancer is an online tool that helps medical professions detect early stages of breast cancer via mammography.</h2>
+      <a style = "text-decoration:none;" href ="predictivemodel.html" div class="call"><span>Start Predict</span></div> </a>
+    </div>
+  </div>
+</div>
+      
+      
+<div class="section">
+  <div class="container">
+     <div class="col four">
+      <h1 class="icon"><img src="{{url_for('static', filename='who.png')}}" height="55" weight="55"></h1>
+      <h1 class="service">Who</h1>
+      <p>Predict breast cancer is for medical professionals only. Please contact us to sign up for an account.</p>
+    </div>
+        
+    <div class="col four">
+      <h1 class="icon"><img src="{{url_for('static', filename='what.png')}}" height="55" weight="55"></h1>
+      <h1 class="service">What</h1>
+      <p>We ask for some details and a mammography of the patient. It then uses data about similiar cases to detect whether or not if the patient has cancer or not.</p>
+    </div>
+  
+        
+    <div class="responsivegroup"></div>
+    <div class="col four">
+      <h1 class="icon"><img src="{{url_for('static', filename='how.png')}}" height="55" weight="55"></h1>
+      <h1 class="service">How</h1>
+          <p>We use deep learning techniques, specifically CNN model. </p>
+    </div>
+        
+    <div class="col four">
+      <h1 class="icon"><img src="{{url_for('static', filename='where.png')}}" height="55" weight="55"></h1>
+      <h1 class="service">Where</h1>
+      <p>To read more go to <a href="aboutus.html">About Us</a>.</p>
+    </div>
+        
+    <div class="group"></div>
+  </div>
+</div>
+      
+      
+      
+<div class="section bg2">
+  <div class="container">
+    <h1>Our Clients</h1>
+    <div class="col three bg nopad pointer">
+      <div class="imgholder">
+           <img src="{{url_for('static', filename='clienta.png')}}" width = "368" height = "300">
+          </div>
+      <h1 class="feature">Dr Sally Hudson</h1>
+      <p>Royal Melbourne Hospital </p>
+    </div>
+    <div class="col three bg nopad pointer">
+      <div class="imgholder">
+            <img src="{{url_for('static', filename='clientb.png')}}" width = "368" height = "300">
+          </div>
+      <h1 class="feature">Dr Linda Larson</h1>
+      <p>Waverley Breast Care</p>
+    </div>
+    <div class="col three bg nopad pointer">
+      <div class="imgholder">
+            <img src="{{url_for('static', filename='clientc.png')}}" width = "368" height = "300">
+          </div>
+      <h1 class="feature">Dr Sophia Lim</h1>
+      <p>Melbourne Breast Unit</p>
+    </div> 
+    <div class="group"></div>
+  </div>
+</div>
+                      
+                        
+<div class="section bg">
+  <div class="container">
+    <h1>Get In Touch </h1>
+    <h2>Have any questions? We'd love to hear from you!</h2>
+      <form>
+        <div class="row input-container">
+      <div class="col-xs-12">
+        <div class="styled-input wide">
+          <input type="text" required/>
+          <label>Name</label> 
+        </div>
+      </div>
+              
+      <div class="col-md-6 col-sm-12">
+        <div class="styled-input">
+          <input type="text" required />
+          <label>Email</label> 
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="styled-input" style="float:right;">
+          <input type="text" required />
+          <label>Phone Number</label> 
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="styled-input wide">
+          <textarea required></textarea>
+          <label>Message</label>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="btn-lrg submit-btn">Send Message</div>
+      </div>
+  </div>
+</div>
+        </form>
+ </div>
+</div>
+        
+          
+                      
+<div class="section">
+  <div class="container">
+    <div class="col two">
+      <h1 class="icon"><img src="{{url_for('static', filename='nbcf.png')}}" height="60" weight="60"></h1>
+      <h1 class="service">National Breast Cancer Foundation</h1>
+      <p><a style = "text-decoration:none;"href="https://nbcf.org.au/">www.nbcf.org.au</a></p>
+    </div>
+    <div class="col two">
+      <h1 class="icon"><img src="{{url_for('static', filename='bcna.png')}}" height="70" weight="70"></h1>
+      <h1 class="service">Breast Cancer Network Australia</h1>
+      <p><a style = "text-decoration:none;"href="https://www.bcna.org.au/">www.bcna.org.au</a></p>
+    </div>
+    <div class="group"></div>
+  </div>
+</div>
+
+                     
+                     
+                     
+<div class="section">
+  <div class="footer">
+    <div class="container white">
+      <div class="col four left">
+        <h1>Webpages</h1>
+        <p><a href="aboutus.html">About Us</a></p>
+        <p><a href="understandingpage.html">Understanding Breast Cancer</a></p>
+        <p><a href="predictivemodel.html">Predictive Model</a></p>
+        <p><a href="results.html">Results</a></p>
+    
+      </div>
+      <div class="col four left">
+        <h1>Breast Cancer Foundations</h1>
+        <p>Breast Cancer Network Australia is one of the four major breast cancer organisations in Australia. These four organisations have differents roles and missions. If you have time, please take a look at them.</p>
+        <p><a href="https://www.bcna.org.au/">Breast Cancer Network Australia</a></p>
+        <p><a href="https://nbcf.org.au/">National Breast Cancer Foundation</a></p>
+        <p><a href="https://www.mcgrathfoundation.com.au/">McGrath Foundation</a></p>
+        <p><a href="https://www.canceraustralia.gov.au/">Cancer Australia</a></p>
+      </div>
+      <div class="col four left">
+        <h1>Our Team</h1>
+        <p>Our team consist of four members, Joanne, Kim, Samanatha, and Gillian.</p>
+        <p>We are final year university students at Monash.</p>
+      </div>
+      <div class="col four left">
+        <h1>Contact Us</h1>
+        <p>You can get in touch with us via <a href="mailto:jtra0013@student.monash.edu">email</a>.</p>
+      </div>
+      <div class="group"></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</script>
+</body>
+
+</html>
